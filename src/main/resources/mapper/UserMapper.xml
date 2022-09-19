@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.nicole.vueserver.mapper.UserMapper">
+
+    <!-- Map<String,Object> selectMapById(long id); -->
+    <select id="selectMapById" resultType="map">
+        select *
+        from user
+        where id = #{id}
+    </select>
+
+    <!-- Page<User> selectPageVo(@Param("page") Page<User> page,@Param("age") Integer age); -->
+    <select id="selectPageVo" resultType="User">
+        select *
+        from user
+        where age >= #{age}
+    </select>
+
+</mapper>

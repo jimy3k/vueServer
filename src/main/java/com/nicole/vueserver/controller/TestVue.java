@@ -17,4 +17,9 @@ public class TestVue {
     public String hello(){
         return "你小子测试成功！";
     }
+
+    @GetMapping("/getuser")
+    public String getuser(){
+        return "你小子测试成功！";
+    }
 }
